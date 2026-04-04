@@ -21,6 +21,8 @@
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            /* New Purple Glow Variable (RGB format for opacity use) */
+            --glow-rgb: 168, 85, 247; 
         }
 
         * {
@@ -38,14 +40,14 @@
             position: relative;
         }
 
-        /* Animated Ambient Background Glow */
+        /* Animated Ambient Background Glow (Now Purple) */
         body::before, body::after {
             content: '';
             position: fixed;
             width: 500px;
             height: 500px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(var(--glow-rgb), 0.2) 0%, transparent 70%);
             z-index: -1;
             animation: pulseGlow 10s infinite alternate ease-in-out;
         }
@@ -171,12 +173,14 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 10px 20px -5px rgba(20, 184, 166, 0.4);
+            /* Purple Shadow */
+            box-shadow: 0 10px 20px -5px rgba(var(--glow-rgb), 0.5);
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 25px -5px rgba(20, 184, 166, 0.6);
+            /* Stronger Purple Shadow */
+            box-shadow: 0 15px 25px -5px rgba(var(--glow-rgb), 0.7);
         }
 
         .btn-outline {
@@ -190,6 +194,8 @@
             border-color: var(--accent-color);
             background: rgba(20, 184, 166, 0.1);
             color: var(--accent-color);
+            /* Purple Glow on Outline Hover */
+            box-shadow: 0 0 15px rgba(var(--glow-rgb), 0.3);
         }
 
         .hero-img {
@@ -263,9 +269,10 @@
         
         .about-content:hover {
             transform: translateY(-5px);
-            border-color: rgba(20, 184, 166, 0.3);
+            border-color: rgba(var(--glow-rgb), 0.4);
             border-left: 5px solid var(--accent-color);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            /* Purple hover glow */
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4), 0 0 20px rgba(var(--glow-rgb), 0.2);
         }
 
         .about-content p {
@@ -294,12 +301,12 @@
             z-index: 1;
         }
 
-        /* Glow effect on hover */
+        /* Glow effect on hover (Purple Mouse Tracking) */
         .card::before, .achievement-box::before {
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(20, 184, 166, 0.06), transparent 40%);
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(var(--glow-rgb), 0.1), transparent 40%);
             z-index: -1;
             opacity: 0;
             transition: opacity 0.5s;
@@ -311,8 +318,9 @@
 
         .card:hover, .achievement-box:hover {
             transform: translateY(-10px) scale(1.02);
-            border-color: rgba(20, 184, 166, 0.3);
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5), 0 0 20px rgba(20, 184, 166, 0.1);
+            border-color: rgba(var(--glow-rgb), 0.4);
+            /* Strong Purple Drop Shadow */
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5), 0 0 25px rgba(var(--glow-rgb), 0.4);
         }
 
         .card i, .achievement-box i {
@@ -401,7 +409,8 @@
         .contact-item:hover i {
             background: var(--accent-gradient);
             color: #fff;
-            box-shadow: 0 10px 20px rgba(20, 184, 166, 0.4);
+            /* Purple Shadow on icons */
+            box-shadow: 0 10px 20px rgba(var(--glow-rgb), 0.5);
         }
 
         /* --- KEYFRAMES --- */
