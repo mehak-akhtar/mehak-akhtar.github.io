@@ -166,7 +166,7 @@
             width: 350px;
             height: 350px;
             object-fit: cover;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Aesthetic morphing shape */
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             border: 4px solid var(--accent-color);
             box-shadow: 0 0 25px rgba(20, 184, 166, 0.4);
             animation: morphFloat 6s ease-in-out infinite;
@@ -299,6 +299,22 @@
         .achievement-box p {
             color: var(--text-secondary);
             font-size: 0.9rem;
+            margin-bottom: 15px; /* Added margin so the button has space */
+        }
+        
+        /* Added missing CSS for the Certificate Links */
+        .cert-link {
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .cert-link:hover {
+            text-decoration: underline;
+            color: #fff;
         }
 
         /* --- CONTACT --- */
@@ -368,7 +384,7 @@
             }
 
             .nav-links {
-                display: none; /* In a real app, you'd add a hamburger menu here */
+                display: none;
             }
             
             .hero-img img {
@@ -404,7 +420,7 @@
             </div>
         </div>
         <div class="hero-img">
-            <!-- Ensure your image is named 'profile.jpg' and is in the same folder -->
+            <!-- Ensure your image is named 'profile.jpeg' and is in the same folder -->
            <img src="profile.jpeg" alt="Mehak Akhtar">
         </div>
     </div>
@@ -433,7 +449,7 @@
             </div>
 
             <div class="card">
-                <h3>Wheather app</h3>
+                <h3>Weather app</h3>
                 <p>A comprehensive task manager featuring real-time database synchronization and user authentication powered by Firebase.</p>
                 <a href="#" class="card-link">View Source Code &rarr;</a>
             </div>
@@ -454,15 +470,15 @@
             <div class="achievement-box">
                 <h3>Python Certification</h3>
                 <p>Completed comprehensive training and certification in Python programming.</p>
-                <a href="python.pdf" target="_blank">View Certificate &rarr;</a>
+                <a href="python.pdf" target="_blank" class="cert-link">View Certificate &rarr;</a>
             </div>
             <div class="achievement-box">
-                <h3>Machine Learning Certification</h3>
+                <h3>Machine Learning</h3>
                 <p>Earned certification in Machine Learning algorithms and data models.</p>
-                <a href="Machine learning.pdf" target="_blank" class="cert-link">View Certificate &rarr;</a>
+                <a href="machine learning.pdf" target="_blank" class="cert-link">View Certificate &rarr;</a>
             </div>
             <div class="achievement-box">
-                <h3>Ethical Hacking Certification</h3>
+                <h3>Ethical Hacking</h3>
                <p>Certified in cybersecurity principles, penetration testing, and network defense.</p> 
                 <a href="ethical hacking.pdf" target="_blank" class="cert-link">View Certificate &rarr;</a>
             </div>
@@ -474,9 +490,9 @@
         <div class="contact">
             <h2 class="section-title">Let's <span>Connect</span></h2>
             <p>Currently open to new opportunities and collaborations!</p>
-            <p>Email me at: <a href="mailto:your@email.com">your@email.com</a></p>
-            <p>Check out my GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-            <p>Connect on LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
+            <p>Email me at: <a href="mailto:mehakakhtar729@email.com">mehakakhtar729@email.com</a></p>
+            <p>Check out my GitHub: <a href="https://github.com/mehak-akhtar" target="_blank">github.com/yourusername</a></p>
+            <p>Connect on LinkedIn: <a href="https://linkedin.com/in/mehak-akhtarr" target="_blank">linkedin.com/in/mehak-akhtarr</a></p>
         </div>
     </section>
 
